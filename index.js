@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
-
+const token = process.env["DISCORD_BOT_SECRET"];
 const client = new Discord.Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -74,4 +74,4 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-client.login('MTAxNzU3NTM5NTQ2MzI3NDUzNg.Gc_Hjy.gjiCx-HPFTYR9ng3WBXxjjM7BZR6oOa0qgKNLE');
+client.login(token);
